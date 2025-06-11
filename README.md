@@ -10,6 +10,8 @@ https://django-tailwind.readthedocs.io/en/latest/installation.html
 - uv add install 'django-tailwind[reload]'
 - add 'tailwind' to INSTALLLED_APPS
 - uv run manage.py tailwind init
-- add theme to INSTALLED_APPS
+- add theme & django_browser_reload to INSTALLED_APPS
 - TAILWIND_APP_NAME = 'theme'
 - uv run manage.py tailwind install
+- add django middleware to MIDDLEWARE
+- uv run manage.py tailwind start

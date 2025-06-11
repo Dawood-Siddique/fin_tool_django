@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #3rd party
     'tailwind',
     'theme',
+    'django_browser_reload',
 
 
     #apps
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'fin_django.urls'
