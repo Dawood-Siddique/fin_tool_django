@@ -1,4 +1,16 @@
 {% extends 'basic.html' %}
 {% block body%}
     <h1>Home page</h1>
+    <button id="chart-btn">Get Data</button>
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('chart-btn').addEventListener('click', function () {
+            fetch('chart/')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+                })
+        });
+    </script>
 {% endblock %}

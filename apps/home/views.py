@@ -15,6 +15,6 @@ class RandomChartData(View):
     def get(self, request):
         window = 100
         index = randint(0, EUModel.objects.count() - window)
-        chart = EUModel.objects.filter(id__range=(index, index + self.window))
+        chart = EUModel.objects.filter(id__range=(index, index + window))
         data = [model_to_dict(obj) for obj in chart]
         return JsonResponse(data, safe=False)
