@@ -4,3 +4,4 @@ db.sqlite3
 migrations
 static
 theme
+!migrations/__init__.py
