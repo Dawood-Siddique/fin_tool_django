@@ -3,9 +3,21 @@
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 {% endblock %}
 {% block body%}
-<h1 class="text-lg">Home page</h1>
-<button id="chart-btn" class="text-lg flex items-center">Get Data</button>
-<pre id="chart"></pre>
+<div class="min-h-screen flex flex-col items-center">
+    <div>
+        <h1 class="text-lg font-bold">Home page</h1>
+        <button id="chart-btn" class="text-lg flex border-2 rounded  px-2 border-amber-300 text-amber-300">Get Data</button>
+    </div>
+    <div>
+        <pre id="chart"></pre>
+    </div>
+    <!-- <div class="flex flex-row"> -->
+    <div>
+        <button class="text-lg border-2 rounded  px-2 m-4 border-green-300 text-green-300">UP</button>
+        <button class="text-lg border-2 rounded  px-2 m-4 border-gray-300 text-gray-300">SKIP</button>
+        <button class="text-lg border-2 rounded  px-2 m-4 border-red-300 text-red-300">DOWN</button>
+    </div>
+</div>
 
 <script>
     document.getElementById('chart-btn').addEventListener('click', function () {
