@@ -1,7 +1,8 @@
 .venv/
 __pycache__
 db.sqlite3
-migrations
 static
 theme
-!migrations/__init__.py
+
+**/migrations/*
+!**/migrations/__init__.py
